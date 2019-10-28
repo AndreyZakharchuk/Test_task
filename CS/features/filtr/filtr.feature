@@ -17,6 +17,7 @@ Feature: Страница #anchor_trades
   Scenario: выбран 1 фильтр
     Given открыта страница сайта "https://cs.money/ru/#anchor_trades"
     When установить фильтр цен от "1000" до "1200"
+    Given ожидание загрузки прелоадера
     Then установлен фильтр цен от "999" до "1201"
     Given удалены все cookies
 

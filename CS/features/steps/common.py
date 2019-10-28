@@ -47,8 +47,6 @@ def step_impl(context):
 @given('ожидание загрузки прелоадера')
 def step_impl(context):
     """Ожидает загрузку прелоадера"""
-    try:
-        s('.block_content #main_container_bot[state="filled"]').should(
+    s('.block_content #main_container_bot[state="filled"]').should(
             be.existing)
-    except TimeoutException:
-        sleep(10)
+    
